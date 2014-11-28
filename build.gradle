@@ -8,6 +8,7 @@
  */
 
 apply plugin: 'java'
+apply plugin: 'maven'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 
@@ -15,14 +16,13 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 group = 'ac.bristol.bragaglia'
-version = '0.5.1'
+version = '0.0.1'
 
-mainClassName = 'xhail.Application'
+mainClassName = 'brooms.Application'
 
-// applicationDefaultJvmArgs = ["-v", "--version"]
-// run {
-// 	args '-v' '--version'
-// }
+run {	
+	args "arg1 arg2 arg3".split()
+}
 
 jar {
     manifest {
